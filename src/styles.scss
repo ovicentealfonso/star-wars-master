@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+.body {
+    padding-bottom: 50px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 12px;
+}
+
+.form-row {
+    margin-top: 5px;
+}
+
+.card {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 10px;
+    /* Added */
+}
+
+// Estilo Maximo Dutti
+.btn {
+    font-family: "BasisGrotesque-Medium-Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+.btn-primary {
+    color: #ffff;
+    border-color: #b99d6b;
+    background-color: #b99d6b;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus:not(:disabled):not(.disabled),
+.btn:focus,
+.btn:active,
+.btn:hover {
+    border-color: #D7BE92;
+    background-color: #D7BE92;
+    box-shadow: none !important;
+    outline: 0;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #b99d6b;
+}

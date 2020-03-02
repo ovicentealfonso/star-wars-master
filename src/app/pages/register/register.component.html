@@ -1,0 +1,45 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>Crear cuenta</h3>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 offset-md-3">
+                <label for="validationName" class="sr-only">Nombre</label>
+                <input type="email" class="form-control" id="validationName" placeholder="Nombre*" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 offset-md-3">
+                <label for="validationLastName" class="sr-only">Apellidos</label>
+                <input type="email" class="form-control" id="validationLastName" placeholder="Apellidos*" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 offset-md-3">
+                <label for="validationUser" class="sr-only">Usuario</label>
+                <input type="email" class="form-control" id="validationUser" placeholder="Usuario*" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 offset-md-3">
+                <label for="validationPassword" class="sr-only">Contraseña</label>
+                <input type="password" class="form-control" id="validationPassword" placeholder="Contraseña*" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <button class="btn btn-primary btn-block
+            col-sm-12 col-md-6 offset-md-3" type="submit">Crear Cuenta</button>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12 col-md-6 offset-md-3 text-center">
+                <p><a [routerLink]="['/login']">Cancelar</a></p>
+            </div>
+        </div>
+    </form>
+
+</div>
