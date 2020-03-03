@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  shipInfoServerURL: 'https://swapi.co/api/starships/',
+  shipImgServerURL: 'https://starwars-visualguide.com/assets/img/starships/'
 };

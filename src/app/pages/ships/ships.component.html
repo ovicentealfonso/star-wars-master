@@ -7,7 +7,12 @@
     </div>
 
     <div class="card-columns">
-        <app-ship-card *ngFor="let ship of ships"></app-ship-card>
+        <app-ship-card *ngFor="let ship of ships" [ship]="ship"></app-ship-card>
+    </div>
+
+    <div class="row" *ngIf="nextPage !== null">
+        <button class="btn btn-primary btn-block
+            col-sm-12 col-md-4 offset-md-4" type="button" (click)="getMore()">Ver más</button>
     </div>
 
 </div>

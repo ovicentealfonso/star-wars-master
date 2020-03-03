@@ -1,7 +1,7 @@
 <div class="card" style="width: 18rem;">
-    <img src="../../../assets/test.jpg" class="card-img-top" alt="...">
+    <img [src]="ship.img" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{ ship.name }}</h5>
-        <button href="#" class="btn btn-primary">Ver detalles</button>
+        <button class="btn btn-primary" (click)="showDetails()">Ver detalles</button>
     </div>
 </div>

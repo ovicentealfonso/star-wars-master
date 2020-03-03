@@ -1,5 +1,6 @@
 export class Ship {
 
+    private _id: number;
     private _name: string;
     private _model: string;
     private _manufacturer: string;
@@ -13,13 +14,13 @@ export class Ship {
     private _hyperdrive_rating: string;
     private _mglt: string;
     private _starship_class: string;
-    private _img: string;
 
 
-    constructor(name: string, model: string, manufacturer: string, cost_in_credits: string, 
+    constructor(id: number, name: string, model: string, manufacturer: string, cost_in_credits: string, 
         length: string, max_atmosphering_speed: string, crew: string, passengers: string, 
         cargo_capacity: string, consumables: string, hyperdrive_rating: string, 
-        mglt: string, starship_class: string, img: string) {
+        mglt: string, starship_class: string) {
+        this._id = id;
 		this._name = name;
 		this._model = model;
 		this._manufacturer = manufacturer;
@@ -33,10 +34,17 @@ export class Ship {
 		this._hyperdrive_rating = hyperdrive_rating;
 		this._mglt = mglt;
 		this._starship_class = starship_class;
-		this._img = img;
     }
     
 
+    /**
+     * Getter id
+     * @return {number}
+     */
+	public get id(): number {
+		return this._id;
+    }
+    
     /**
      * Getter name
      * @return {string}
@@ -139,16 +147,24 @@ export class Ship {
      */
 	public get starship_class(): string {
 		return this._starship_class;
-	}
-
+    }
+    
     /**
      * Getter img
      * @return {string}
      */
 	public get img(): string {
-		return this._img;
+          return `https://starwars-visualguide.com/assets/img/starships/${this._id}.jpg`;
 	}
 
+    /**
+     * Setter id
+     * @param {number} value
+     */
+	public set id(value: number) {
+		this._id = value;
+    }
+    
     /**
      * Setter name
      * @param {string} value
@@ -252,16 +268,6 @@ export class Ship {
 	public set starship_class(value: string) {
 		this._starship_class = value;
 	}
-
-    /**
-     * Setter img
-     * @param {string} value
-     */
-	public set img(value: string) {
-		this._img = value;
-	}
-
-    
 
 
 }

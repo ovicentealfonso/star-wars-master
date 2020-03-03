@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Ship } from '../../classes/ship';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ship-card',
@@ -8,26 +9,18 @@ import { Ship } from '../../classes/ship';
 })
 export class ShipCardComponent implements OnInit {
 
-  @Input() ship: Ship = new Ship(
-    'Executor',
-    'Executor-class star dreadnought',
-    'Kuat Drive Yards, Fondor Shipyards',
-    '1143350000',
-    '19000',
-    'n/a',
-    '279144',
-    '38000',
-    '250000000',
-    '6 years',
-    '2.0',
-    '40',
-    'Star dreadnought',
-    '../../../assets/test.jpg'
-  );
+  @Input() ship: Ship;
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
+  }
+
+  /**
+   * Redirecciona el navegador a la página con los detalles de la nave
+   */
+  public showDetails() {
+    this._router.navigate(['/ship', this.ship.id]);
   }
 
 }
