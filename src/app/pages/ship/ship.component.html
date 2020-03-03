@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <img *ngIf="ship !== undefined" [src]="ship?.img" alt="" width="100%">
+            <img *ngIf="ship !== undefined" [src]="ship?.img | image" alt="" width="100%">
         </div>
         <div class="col-md-6 col-sm-12">
             <h3>{{ ship?.name }}</h3>

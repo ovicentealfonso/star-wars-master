@@ -7,11 +7,14 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ShipComponent } from './pages/ship/ship.component';
 import { ShipsComponent } from './pages/ships/ships.component';
 
+// Guards
+import { LoginGuard } from './guards/login.guard';
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'ship/:id', component: ShipComponent },
-  { path: 'ships', component: ShipsComponent },
+  { path: 'ship/:id', component: ShipComponent, canActivate: [ LoginGuard ] },
+  { path: 'ships', component: ShipsComponent, canActivate: [ LoginGuard ] },
   { path: '**', pathMatch: 'full', redirectTo: 'ships' }
 ];
 

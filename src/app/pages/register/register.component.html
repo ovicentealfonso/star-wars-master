@@ -6,29 +6,29 @@
         </div>
     </div>
 
-    <form>
+    <form ngNativeValidate [formGroup]="registerForm" (ngSubmit)="register()">
         <div class="form-row">
             <div class="col-sm-12 col-md-6 offset-md-3">
                 <label for="validationName" class="sr-only">Nombre</label>
-                <input type="email" class="form-control" id="validationName" placeholder="Nombre*" required>
+                <input formControlName="firstName" type="text" class="form-control" id="validationName" placeholder="Nombre*" required>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-12 col-md-6 offset-md-3">
                 <label for="validationLastName" class="sr-only">Apellidos</label>
-                <input type="email" class="form-control" id="validationLastName" placeholder="Apellidos*" required>
+                <input formControlName="lastName" type="text" class="form-control" id="validationLastName" placeholder="Apellidos*" required>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-12 col-md-6 offset-md-3">
                 <label for="validationUser" class="sr-only">Usuario</label>
-                <input type="email" class="form-control" id="validationUser" placeholder="Usuario*" required>
+                <input formControlName="userName" type="text" class="form-control" id="validationUser" placeholder="Usuario*" required>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-12 col-md-6 offset-md-3">
                 <label for="validationPassword" class="sr-only">Contraseña</label>
-                <input type="password" class="form-control" id="validationPassword" placeholder="Contraseña*" required>
+                <input formControlName="password" type="password" class="form-control" id="validationPassword" placeholder="Contraseña*" required>
             </div>
         </div>
         <div class="form-row">
